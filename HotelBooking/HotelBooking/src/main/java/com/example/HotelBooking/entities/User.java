@@ -21,17 +21,17 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @NotBlank(message="Email is required")
-    @Column(unique=true)
-    private  String email;
+    @NotBlank(message = "Email is required")
+    @Column(unique = true)
+    private String email;
 
-    @NotBlank(message="Password is required")
+    @NotBlank(message = "Password is required")
     private String password;
     private String firstName;
     private String lastName;
 
-    @NotBlank(message="Phone Number  is required")
-    @Column(name="phone_number")
+    @NotBlank(message = "Phone Number  is required")
+    @Column(name = "phone_number")
     private String phoneNumber;
 
 
@@ -43,4 +43,4 @@ public class User {
     private final LocalDateTime createdAt = LocalDateTime.now();
 
 
-
+}

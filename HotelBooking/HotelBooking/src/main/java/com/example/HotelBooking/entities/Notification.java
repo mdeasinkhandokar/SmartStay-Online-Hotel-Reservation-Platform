@@ -13,20 +13,20 @@ import java.time.LocalDateTime;
 
 @Entity
 @Data
-@Table(name="booking")
+@Table(name = "notifications")
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
 public class Notification {
 
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    private String subject;
 
-    private String  subject;
-
-    @NotBlank(message="recipient is required")
+    @NotBlank(message = "recipient is required")
     private String recipient;
 
     private String body;
@@ -34,13 +34,9 @@ public class Notification {
     private String bookingReference;
 
     @Enumerated(EnumType.STRING)
-    private NotificationType notificationType;
+    private NotificationType type;
 
-    private final LocalDateTime createAt= LocalDateTime.now();
-
-
-
-
+    private final LocalDateTime createdAt = LocalDateTime.now();
 
 
 }
