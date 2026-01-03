@@ -9,7 +9,7 @@ import java.time.LocalDate;
 import java.util.List;
 import java.util.Optional;
 
-public interface BookingRespository extends JpaRepository<Booking,Long> {
+public interface BookingRepository extends JpaRepository<Booking,Long> {
 
     List<Booking> findByUserId(Long userId); // Fetch all bookings for a specific user
 
