@@ -25,7 +25,6 @@ import java.util.List;
 @Service
 @RequiredArgsConstructor
 @Slf4j
-@Builder
 public class UserServiceImpl implements UserService {
 
 
